@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Fix - Responsive</title>
+    <style>
+        /* Базовые стили */
+        :root {
+            --primary: #fff;
+            --secondary: #fff;
+            --accent: #fff;
+            --light: #fff;
+            --dark: #282829;
+            --text: #282829;
+            --bg: #FFFFFF;
+            --header-bg: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --form-bg: #F8F9FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #282829;
+            color: var(--text);
+            line-height: 1.6;
+            padding-top: 80px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Шапка */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--header-bg);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Основной контент */
+        .container {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #282829;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Секции */
+        .section1 {
+            margin-bottom: 60px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .text-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .button_a {
+            color: #282829;
+            text-decoration: none;
+            background-color: #fff;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 18px;
+            padding-top: 4px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .img1 {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .section2 {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .img2 {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .ul1 {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ul1 li {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+            position: relative;
+            padding-left: 30px;
+            color: var(--light);
+        }
+
+        .ul1 li:before {
+            content: "•";
+            color: #fff;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Форма */
+        .form-section {
+            background-color: var(--form-bg);
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 12px;
+            margin-top: 50px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .form-input {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .submit-btn {
+            background-color: #0c0c0c;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .img3 {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 30px auto 0;
+            display: block;
+        }
+
+        /* Футер */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-link {
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* Адаптация для 769px и больше */
+        @media (min-width: 769px) {
+            .section1 {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .text-group {
+                width: 45%;
+            }
+
+            .img1 {
+                width: 50%;
+                margin-top: 0;
+            }
+
+            .section2 {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section2 > * {
+                width: 30%;
+            }
+
+            .form-group {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .form-group > div {
+                width: 50%;
+            }
+
+            .img3 {
+                margin: 0 0 0 50px;
+            }
+        }
+
+        /* Адаптация для 320px-768px */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .section1 {
+                margin-top: 30px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Фиксированная шапка -->
+    <header id="mainHeader">
+        <a href="#" class="logo">Luxury Fix</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Первая секция -->
+        <section class="section1">
+            <div class="text-group">
+                <h1>Where Dreams Become Reality</h1>
+                <p style="color: var(--light);">Luxury Fix - Crafting Elegance Since 1985</p>
+                <div style="color: var(--light);">
+                    <p><strong>30%</strong> sed do eiusmod tempor</p>
+                    <p><strong>17%</strong> adipiscing elit sed do</p>
+                </div>
+                <a href="#" class="button_a">Order</a>
+            </div>
+            <img src="./img/1.png" alt="Luxury Car" class="img1">
+        </section>
+
+        <!-- Вторая секция -->
+        <section class="section2">
+            <img src="./img/2.jpeg" alt="Service 1" class="img2">
+            <div>
+                <ul class="ul1">
+                    <li>Unmatched Expertise and Experience We pride ourselves on having a team of highly qualified professionals with years of experience in luxury car repair.</li>
+                    <li>State-of-the-Art Equipment Our facility is equipped with the latest diagnostic and repair equipment, allowing us to accurately identify and fix any issues with your vehicle.</li>
+                    <li>Genuine Parts and Materials We exclusively use genuine parts and high-quality materials sourced directly from manufacturers.</li>
+                    <li>Exceptional Customer Service From your first call to the completion of service, you receive personalized attention and top-notch customer care.</li>
+                </ul>
+            </div>
+            <img src="./img/3.jpeg" alt="Service 2" class="img2">
+        </section>
+
+        <!-- Секция с формой -->
+        <section class="form-section">
+            <div class="form-container">
+                <form id="contactForm" class="form-group">
+                    <div>
+                        <h2>Consectetur sed do eiusmod</h2>
+                        <div class="form-row">
+                            <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                    <img src="./img/4.jpeg" class="img3">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <h3>Luxury Fix</h3>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Services</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+            <p class="footer-copyright">© 2023 Luxury Fix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Фиксация шапки
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(51, 51, 51, 0.95)';
+                header.style.padding = '10px 5%';
+            } else {
+                header.style.background = '#333333';
+                header.style.padding = '15px 5%';
+            }
+        });
+
+        // Обработка формы
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
